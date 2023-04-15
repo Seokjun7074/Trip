@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  text: string;
+  text?: string;
 }
 
 const Input = ({ text }: Props) => {

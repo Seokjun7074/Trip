@@ -1,6 +1,6 @@
 const size = {
-  s: "1rem",
-  m: "1.5rem",
+  s: "0.5rem",
+  m: "1rem",
   l: "2rem",
   title: "3rem",
 };

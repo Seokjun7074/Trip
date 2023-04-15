@@ -2,9 +2,9 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  children: any;
-  onClick: any;
-  src: string;
+  children?: any;
+  onClick?: any;
+  src?: string;
 }
 
 const Img = ({ children, onClick, src }: Props) => {
