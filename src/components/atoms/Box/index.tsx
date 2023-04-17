@@ -5,6 +5,6 @@ interface Props {
 }
 
 const FlexBox = ({ children }: Props) => {
-  return <S.FlexBox></S.FlexBox>;
+  return <S.FlexBox>{children}</S.FlexBox>;
 };
 export default FlexBox;

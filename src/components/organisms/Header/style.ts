@@ -1,7 +1,7 @@
+import { FlexBox } from "components/atoms/Box/style";
+import { Button } from "components/atoms/Button/style";
+import { Img } from "components/atoms/Img/style";
 import styled from "styled-components";
-import { Button } from "../../atoms/Button/style";
-import { Img } from "../../atoms/Img/style";
-import { FlexBox } from "../../atoms/Box/style";
 
 export const Header = styled.header`
   width: 100%;
