@@ -3,10 +3,11 @@ import * as S from "./style";
 
 interface Props {
   text?: string;
+  className?: string;
 }
 
-const Input = ({ text }: Props) => {
-  return <S.Label>{text}</S.Label>;
+const Label = ({ text, className }: Props) => {
+  return <S.Label className={className}>{text}</S.Label>;
 };
 
-export default Input;
+export default Label;

@@ -1,6 +1,6 @@
-import { FlexBox } from "components/atoms/Box/style";
-import { Button } from "components/atoms/Button/style";
-import { Img } from "components/atoms/Img/style";
+import FlexBox from "components/atoms/Box";
+import Button from "components/atoms/Button";
+import Img from "components/atoms/Img";
 import styled from "styled-components";
 
 export const Header = styled.header`

@@ -1,6 +1,6 @@
 import React from "react";
 
 const Post = () => {
-  return <div>Post</div>;
+  return <>Post</>;
 };
 export default Post;
