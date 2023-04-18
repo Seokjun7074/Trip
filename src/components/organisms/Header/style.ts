@@ -1,4 +1,4 @@
-import FlexBox from "components/atoms/Box";
+import FlexBox from "components/atoms/FlexBox";
 import Button from "components/atoms/Button";
 import Img from "components/atoms/Img";
 import styled from "styled-components";

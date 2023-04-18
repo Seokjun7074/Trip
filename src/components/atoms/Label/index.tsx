@@ -2,12 +2,12 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  text?: string;
   className?: string;
+  children: string;
 }
 
-const Label = ({ text, className }: Props) => {
-  return <S.Label className={className}>{text}</S.Label>;
+const Label = ({ className, children }: Props) => {
+  return <S.Label className={className}>{children}</S.Label>;
 };
 
 export default Label;
