@@ -5,20 +5,6 @@ import Input from "components/atoms/InputText";
 import Label from "components/atoms/Label";
 import styled from "styled-components";
 
-export const PostInputWrapper = styled(FlexBox)`
-  margin: 10px auto;
-  padding: ${({ theme }) => theme.size.l};
-  height: 100%;
-  width: 60%;
-  min-width: 800px;
-  box-shadow: 0px 0px 10px grey;
-  border-radius: 5px;
-
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-`;
-
 export const Divider = styled(FlexBox)`
   width: 100%;
   flex-direction: column;
@@ -47,9 +33,7 @@ export const ImageInput = styled.input`
   height: 50px;
 `;
 
-export const PreviewImage = styled(Img)`
-  height: 100%;
-`;
+export const PreviewImage = styled(Img)``;
 
 export const SubmitButton = styled(Button)`
   padding: ${({ theme }) => theme.size.m};

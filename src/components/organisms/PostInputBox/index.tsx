@@ -1,14 +1,5 @@
 import useInput from "hooks/useInput";
-import {
-  ContentInput,
-  Divider,
-  ImageInput,
-  InputLabel,
-  PostInputWrapper,
-  PreviewImage,
-  SubmitButton,
-  TitleInput,
-} from "./style";
+import { ContentInput, Divider, ImageInput, InputLabel, PreviewImage, SubmitButton, TitleInput } from "./style";
 import { useState } from "react";
 
 const PostInputBox = () => {
@@ -24,15 +15,21 @@ const PostInputBox = () => {
       setImagePreview(imgUrl);
     }
   };
+  const deleteImagePreview = (imagePreview: string) => {
+    URL.revokeObjectURL(imagePreview);
+    setImagePreview("");
+  };
 
   const submit = () => {
     console.log(title);
     console.log(content);
     console.log(imagePreview);
+    deleteImagePreview(imagePreview);
+    // 페이지 이동 시키기
   };
 
   return (
-    <PostInputWrapper>
+    <>
       <Divider>
         <InputLabel>제목</InputLabel>
         <TitleInput type="text" placeholder="제목" onChange={titleHandler} />
@@ -47,7 +44,7 @@ const PostInputBox = () => {
         <PreviewImage src={imagePreview} />
       </Divider>
       <SubmitButton onClick={submit}>작성하기</SubmitButton>
-    </PostInputWrapper>
+    </>
   );
 };
 
