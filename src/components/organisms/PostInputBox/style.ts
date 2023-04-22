@@ -1,5 +1,6 @@
 import Button from "components/atoms/Button";
 import FlexBox from "components/atoms/FlexBox";
+import Img from "components/atoms/Img";
 import Input from "components/atoms/InputText";
 import Label from "components/atoms/Label";
 import styled from "styled-components";
@@ -38,6 +39,16 @@ export const TitleInput = styled(Input)`
 `;
 export const ContentInput = styled(TitleInput)`
   height: 100px;
+`;
+
+export const ImageInput = styled.input`
+  width: 100%;
+  padding: ${({ theme }) => theme.size.s};
+  height: 50px;
+`;
+
+export const PreviewImage = styled(Img)`
+  height: 100%;
 `;
 
 export const SubmitButton = styled(Button)`

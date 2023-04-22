@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 's-core-dream-regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0 !important;
     overflow-y: hidden;
+
   }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html, body, #root, .Section__container___3YYTG {
-    height: 100%;
+    height: 100vh;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
