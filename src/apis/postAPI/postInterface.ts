@@ -16,6 +16,7 @@ export interface setPostInterface {
   kind: string;
   title: string;
   content: string;
+  image: string | File;
 }
 
 export interface editPostInterface {

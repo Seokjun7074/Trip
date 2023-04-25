@@ -4,10 +4,15 @@ import * as S from "./style";
 interface Props {
   onClick?: any;
   children?: any;
+  className?: string;
 }
 
-const Button = ({ children, onClick }: Props) => {
-  return <S.Button onClick={onClick}>{children}</S.Button>;
+const Button = ({ children, onClick, className }: Props) => {
+  return (
+    <S.Button onClick={onClick} className={className}>
+      {children}
+    </S.Button>
+  );
 };
 
 export default Button;
