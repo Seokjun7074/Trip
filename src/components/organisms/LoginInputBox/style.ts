@@ -1,7 +1,6 @@
 import Button from "components/atoms/Button";
 import FlexBox from "components/atoms/FlexBox";
 import Input from "components/atoms/InputText";
-import Label from "components/atoms/Label";
 import styled from "styled-components";
 
 export const LoginInputBoxWrapper = styled(FlexBox)`
