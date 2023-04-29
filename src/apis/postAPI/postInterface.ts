@@ -1,3 +1,28 @@
+type notice = {
+  postId: number;
+  registerTime: string;
+  writer: string;
+  title: string;
+  views: number;
+  likes: number;
+};
+
+type board = {
+  postId: number;
+  registerTime: string;
+  writer: string;
+  title: string;
+  views: number;
+  likes: number;
+};
+
+export interface getBoardInterface {
+  status: 200;
+  posts: {
+    notices: notice[];
+    boards: board[];
+  };
+}
 export interface getPostInterface {
   status: number;
   model: {
