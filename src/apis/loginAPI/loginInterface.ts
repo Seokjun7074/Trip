@@ -9,5 +9,5 @@ export interface signupInterface {
   name: string;
   gender: boolean;
   age: number;
-  call: string;
+  phone: string;
 }

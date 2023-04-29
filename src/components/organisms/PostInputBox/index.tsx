@@ -1,16 +1,19 @@
 import useInput from "hooks/useInput";
 import { ContentInput, Divider, ImageInput, InputLabel, PreviewImage, SubmitButton, TitleInput } from "./style";
 import { useState } from "react";
+import { setPost } from "apis/postAPI";
 
 const PostInputBox = () => {
   const [title, setTitle, titleHandler] = useInput("");
   const [content, setContent, contentHandler] = useInput("");
   const [imagePreview, setImagePreview] = useState("");
+  const formData = new FormData();
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       const blob = new Blob([file]);
+      formData.append("image", file);
       const imgUrl = URL.createObjectURL(blob);
       setImagePreview(imgUrl);
     }
@@ -19,11 +22,16 @@ const PostInputBox = () => {
     URL.revokeObjectURL(imagePreview);
     setImagePreview("");
   };
-
-  const submit = () => {
-    console.log(title);
-    console.log(content);
-    console.log(imagePreview);
+  const makeObject = () => {
+    return {
+      title: title,
+      content: content,
+    };
+  };
+  const submit = async () => {
+    const data = makeObject();
+    console.log(data);
+    // const res = await setPost(data);
     deleteImagePreview(imagePreview);
     // 페이지 이동 시키기
   };

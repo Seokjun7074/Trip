@@ -1,6 +1,7 @@
 import Form from "components/atoms/Form";
 import { SignupInputBoxWrapper, SignupInput, SignupButton, RadioBox } from "./style";
 import useInput from "hooks/useInput";
+import { signupUser } from "apis/loginAPI";
 
 const SignupInputBox = () => {
   const [email, setEmail, onChangeEmail] = useInput("");
@@ -22,10 +23,11 @@ const SignupInputBox = () => {
     };
   };
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = makeObject();
     console.log(data);
+    // const res = await signupUser(data);
   };
 
   return (
