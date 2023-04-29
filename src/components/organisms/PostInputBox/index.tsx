@@ -6,15 +6,16 @@ import { setPost } from "apis/postAPI";
 const PostInputBox = () => {
   const [title, setTitle, titleHandler] = useInput("");
   const [content, setContent, contentHandler] = useInput("");
-  const [imagePreview, setImagePreview] = useState("");
+  const [imagePreview, setImagePreview] = useState<string>("");
+  const [imageFile, setImageFile] = useState<File>();
   const formData = new FormData();
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       const blob = new Blob([file]);
-      formData.append("image", file);
       const imgUrl = URL.createObjectURL(blob);
+      setImageFile(file);
       setImagePreview(imgUrl);
     }
   };
@@ -22,18 +23,17 @@ const PostInputBox = () => {
     URL.revokeObjectURL(imagePreview);
     setImagePreview("");
   };
-  const makeObject = () => {
-    return {
-      title: title,
-      content: content,
-    };
+  const makeFormdata = () => {
+    formData.append("title", title);
+    formData.append("content", content);
+    if (imageFile != undefined) {
+      formData.append("image", imageFile);
+    }
   };
-  const submit = async () => {
-    const data = makeObject();
-    console.log(data);
+  const submit = () => {
+    makeFormdata();
     // const res = await setPost(data);
     deleteImagePreview(imagePreview);
-    // 페이지 이동 시키기
   };
 
   return (
