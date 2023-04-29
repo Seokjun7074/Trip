@@ -1,18 +1,37 @@
 import API from "../axios";
 import { setPostInterface, editPostInterface } from "./postInterface";
 
-export const setPost = (data: setPostInterface) => API.post("/posts", data);
+export const setPost = async (data: setPostInterface) => {
+  const res = await API.post("/posts", data);
+  return res;
+};
 
-export const getPost = (id: number) => API.get(`/posts/${id}`);
+export const getPost = async (id: number) => {
+  const res = await API.get(`/posts/${id}`);
+  return res;
+};
 
-export const editPost = (id: number, data: editPostInterface) => API.put(`/posts/${id}`, data);
+export const editPost = async (id: number, data: editPostInterface) => {
+  const res = await API.put(`/posts/${id}`, data);
+  return res;
+};
 
-export const deletePost = (id: number) => API.delete(`/posts/${id}`);
+export const deletePost = async (id: number) => {
+  const res = await API.delete(`/posts/${id}`);
+  return res;
+};
 
-export const likePost = (id: number) => API.post(`/posts/${id}/like`);
+export const likePost = async (id: number) => {
+  const res = await API.post(`/posts/${id}/like`);
+  return res;
+};
 
-export const searchPost = (page: number, size: number, keyword: string) =>
-  API.post(`/posts/search?page=${page}&size=${size}&keyword=${keyword}`);
+export const searchPost = async (page: number, size: number, keyword: string) => {
+  const res = await API.post(`/posts/search?page=${page}&size=${size}&keyword=${keyword}`);
+  return res;
+};
 
-export const getAllPost = (page: number, size: number, sort: string) =>
-  API.get(`/board?page=${page}&size=${size}&sort=${sort}`);
+export const getAllPost = async (page: number, size: number, sort: string) => {
+  const res = await API.get(`/board?page=${page}&size=${size}&sort=${sort}`);
+  return res;
+};

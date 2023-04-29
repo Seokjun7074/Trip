@@ -1,12 +1,27 @@
 import API from "../axios";
 import { loginInterface, signupInterface } from "./loginInterface";
 
-export const signupUser = (data: signupInterface) => API.post("/users", data);
+export const signupUser = async (data: signupInterface) => {
+  const res = await API.post("/users", data);
+  return res;
+};
 
-export const editUser = (id: string, data: signupInterface) => API.put(`/users/${id}`, data);
+export const editUser = async (id: string, data: signupInterface) => {
+  const res = await API.put(`/users/${id}`, data);
+  return res;
+};
 
-export const deleteUser = (id: string) => API.delete(`/users/${id}`);
+export const deleteUser = async (id: string) => {
+  const res = await API.delete(`/users/${id}`);
+  return res;
+};
 
-export const loginUser = (data: loginInterface) => API.post("/login", data);
+export const loginUser = async (data: loginInterface) => {
+  const res = await API.post("/login", data);
+  return res;
+};
 
-export const logoutUser = () => API.post("/logout");
+export const logoutUser = async () => {
+  const res = await API.post("/logout");
+  return res;
+};
