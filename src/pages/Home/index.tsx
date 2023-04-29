@@ -1,78 +1,15 @@
 import Header from "components/organisms/Header";
-import Card from "components/organisms/Card";
 import { HomeWrapper } from "./style";
-
-const dummy = [
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-  {
-    title: "제목",
-  },
-];
+import GridBox from "components/organisms/GridBox";
 
 const Home = () => {
   return (
-    <HomeWrapper>
+    <>
       <Header />
-      {dummy.map((e, idx) => (
-        <Card key={idx} title={e.title}></Card>
-      ))}
-    </HomeWrapper>
+      <HomeWrapper>
+        <GridBox />
+      </HomeWrapper>
+    </>
   );
 };
 export default Home;

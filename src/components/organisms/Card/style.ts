@@ -6,4 +6,5 @@ export const CardWrapper = styled(FlexBox)`
   height: 100px;
   border-radius: 10px;
   border: 1px solid grey;
+  cursor: pointer;
 `;
