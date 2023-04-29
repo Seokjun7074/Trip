@@ -2,9 +2,10 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  onClick?: any;
+  onClick?: () => void;
   children?: any;
   className?: string;
+  type?: string;
 }
 
 const Button = ({ children, onClick, className }: Props) => {

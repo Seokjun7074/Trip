@@ -7,6 +7,7 @@ interface Props {
   placeholder?: string;
   onChange?: any;
   className?: string;
+  name?: string;
 }
 
 const Input = ({ type, value, placeholder, onChange, className }: Props) => {

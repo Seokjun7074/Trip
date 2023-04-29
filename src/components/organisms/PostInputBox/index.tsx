@@ -3,8 +3,8 @@ import { ContentInput, Divider, ImageInput, InputLabel, PreviewImage, SubmitButt
 import { useState } from "react";
 
 const PostInputBox = () => {
-  const [title, titleHandler] = useInput("");
-  const [content, contentHandler] = useInput("");
+  const [title, setTitle, titleHandler] = useInput("");
+  const [content, setContent, contentHandler] = useInput("");
   const [imagePreview, setImagePreview] = useState("");
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
