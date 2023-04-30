@@ -1,8 +1,9 @@
 import API from "../axios";
 import { setPostInterface, editPostInterface, getBoardInterface } from "./postInterface";
 
-export const getBoard = async (data: getBoardInterface, page: number, size: number) => {
-  const res = await API.post(`/board?page=${page}&size=${size}&sort=recent`, data);
+export const getBoard = async (page: number, size: number) => {
+  // const res = await API.post(`/board?page=${page}&size=${size}&sort=recent`);
+  const res = await API.get(`/board`);
   return res;
 };
 
