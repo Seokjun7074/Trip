@@ -7,6 +7,7 @@ const size = {
 const color = {
   lightgray: "#E9E9E9",
   darkgray: "#333333",
+  blue: "#3288FF",
 };
 
 const theme = {

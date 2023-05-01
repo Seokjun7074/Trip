@@ -1,7 +1,7 @@
+import FlexBox from "components/atoms/FlexBox";
+import Button from "components/atoms/Button";
+import Img from "components/atoms/Img";
 import styled from "styled-components";
-import { Button } from "../../atoms/Button/style";
-import { Img } from "../../atoms/Img/style";
-import { FlexBox } from "../../atoms/Box/style";
 
 export const Header = styled.header`
   width: 100%;
@@ -13,6 +13,7 @@ export const Header = styled.header`
   position: fixed;
   top: 0px;
   box-shadow: 0px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
 `;
 
 export const ButtonWrapper = styled(FlexBox)`
