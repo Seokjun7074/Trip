@@ -134,6 +134,18 @@
           "likes": 1
         }
       ]
+    },
+    "getPost": {
+      "status": 200,
+      "model": {
+        "registerTime": "yyyy-MM-dd HH:mm:ss",
+        "name": "작성자 이름",
+        "title": "제목",
+        "content": "내용",
+        "views": 1,
+        "likes": 3,
+        "like": true
+      }
     }
   }
 }

@@ -18,7 +18,6 @@ const GridBox = () => {
 
   useEffect(() => {
     const fetchData = getBoard(0, 0).then((res) => {
-      // console.log(res.data.posts.notices);
       setBoards(res.data.posts.boards);
       setNotices(res.data.posts.notices);
     });
