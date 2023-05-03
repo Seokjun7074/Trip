@@ -3,7 +3,8 @@ import { DetailWrapper } from "./style";
 import DetailBox from "components/organisms/DetailBox";
 
 const Detail = () => {
-  const { postId } = useParams();
+  const { postId } = useParams() as { postId: string };
+
   return (
     <DetailWrapper>
       detail페이지

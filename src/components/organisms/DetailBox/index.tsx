@@ -1,26 +1,32 @@
+import { useEffect, useState } from "react";
 import { DetailBoxWrapper, DetailLabel, DetailText } from "./style";
+import { getPost } from "apis/postAPI";
 
-const DetailBox = (postId: any) => {
-  console.log(postId);
+const initState = {
+  registerTime: "yyyy-MM-dd HH:mm:ss",
+  name: "작성자 이름",
+  title: "tt",
+  content: "cc",
+  views: 1,
+  likes: 3,
+  like: true,
+};
+
+const DetailBox = ({ postId }: any) => {
+  const [postData, setPostData] = useState(initState);
+
+  useEffect(() => {
+    getPost(postId).then((res) => {
+      setPostData(res.data);
+    });
+  }, [postId]);
+
   return (
     <DetailBoxWrapper>
-      <DetailLabel>제목</DetailLabel>
-      <DetailText>내용</DetailText>
+      <DetailLabel>{postData.title}</DetailLabel>
+      <DetailText>{postData.content}</DetailText>
     </DetailBoxWrapper>
   );
 };
 
 export default DetailBox;
-
-// "getPost": {
-//     "status": 200,
-//     "model": {
-//       "registerTime": "yyyy-MM-dd HH:mm:ss",
-//       "name": "작성자 이름",
-//       "title": "제목",
-//       "content": "내용",
-//       "views": 1,
-//       "likes": 3,
-//       "like": true
-//     }
-//   }
