@@ -1,43 +1,22 @@
 import API from "../axios";
 import { setPostInterface, editPostInterface, getBoardInterface } from "./postInterface";
 
-export const getBoard = async (page: number, size: number) => {
-  // const res = await API.post(`/board?page=${page}&size=${size}&sort=recent`);
-  const res = await API.get(`/board`);
-  return res;
-};
+export const boardAPI = {
+  // getBoard: (page: number, size: number) => API.post(`/board?page=${page}&size=${size}&sort=recent`),
+  getBoard: (page: number, size: number) => API.get(`/board`),
 
-export const setPost = async (data: setPostInterface) => {
-  const res = await API.post("/posts", data);
-  return res;
-};
+  getPost: (id: number) => API.get(`/posts/${id}`),
 
-export const getPost = async (id: number) => {
-  const res = await API.get(`/posts/${id}`);
-  return res;
-};
+  setPost: (data: setPostInterface) => API.post("/posts", data),
 
-export const editPost = async (id: number, data: editPostInterface) => {
-  const res = await API.put(`/posts/${id}`, data);
-  return res;
-};
+  editPost: (id: number, data: editPostInterface) => API.put(`/posts/${id}`, data),
 
-export const deletePost = async (id: number) => {
-  const res = await API.delete(`/posts/${id}`);
-  return res;
-};
+  deletePost: (id: number) => API.delete(`/posts/${id}`),
 
-export const likePost = async (id: number) => {
-  const res = await API.post(`/posts/${id}/like`);
-  return res;
-};
+  likePost: (id: number) => API.post(`/posts/${id}/like`),
 
-export const searchPost = async (page: number, size: number, keyword: string) => {
-  const res = await API.post(`/posts/search?page=${page}&size=${size}&keyword=${keyword}`);
-  return res;
-};
+  searchPost: (page: number, size: number, keyword: string) =>
+    API.post(`/posts/search?page=${page}&size=${size}&keyword=${keyword}`),
 
-export const getAllPost = async (page: number, size: number, sort: string) => {
-  const res = await API.get(`/board?page=${page}&size=${size}&sort=${sort}`);
-  return res;
+  getAllPost: (page: number, size: number, sort: string) => API.get(`/board?page=${page}&size=${size}&sort=${sort}`),
 };

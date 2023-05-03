@@ -1,7 +1,6 @@
 import useInput from "hooks/useInput";
 import { ContentInput, Divider, ImageInput, InputLabel, PreviewImage, SubmitButton, TitleInput } from "./style";
 import { useState } from "react";
-import { setPost } from "apis/postAPI";
 
 const PostInputBox = () => {
   const [title, setTitle, titleHandler] = useInput("");
@@ -26,13 +25,12 @@ const PostInputBox = () => {
   const makeFormdata = () => {
     formData.append("title", title);
     formData.append("content", content);
-    if (imageFile != undefined) {
+    if (imageFile !== undefined) {
       formData.append("image", imageFile);
     }
   };
   const submit = () => {
     makeFormdata();
-    // const res = await setPost(data);
     deleteImagePreview(imagePreview);
   };
 

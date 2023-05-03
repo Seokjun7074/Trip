@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { DetailBoxWrapper, DetailLabel, DetailText } from "./style";
-import { getPost } from "apis/postAPI";
+import { boardAPI } from "apis/postAPI";
 
 const initState = {
   registerTime: "yyyy-MM-dd HH:mm:ss",
@@ -15,10 +15,13 @@ const initState = {
 const DetailBox = ({ postId }: any) => {
   const [postData, setPostData] = useState(initState);
 
+  const getResponse = async () => {
+    const response = await boardAPI.getPost(postId);
+    setPostData(response.data);
+  };
+
   useEffect(() => {
-    getPost(postId).then((res) => {
-      setPostData(res.data);
-    });
+    getResponse();
   }, [postId]);
 
   return (

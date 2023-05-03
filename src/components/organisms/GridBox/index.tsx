@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { boardAPI } from "apis/postAPI";
 import Card from "../Card";
 import { Grid, GridBoxWrapper } from "./style";
-import { getBoard } from "apis/postAPI";
 
 const initeState = {
   postId: 1,
@@ -16,11 +16,14 @@ const GridBox = () => {
   const [notices, setNotices] = useState([initeState]);
   const [boards, setBoards] = useState([initeState]);
 
+  const getResponse = async () => {
+    const response = await boardAPI.getBoard(0, 0);
+    setBoards(response.data.posts.boards);
+    setNotices(response.data.posts.notices);
+  };
+
   useEffect(() => {
-    const fetchData = getBoard(0, 0).then((res) => {
-      setBoards(res.data.posts.boards);
-      setNotices(res.data.posts.notices);
-    });
+    getResponse();
   }, []);
 
   return (
