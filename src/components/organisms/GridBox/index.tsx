@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { boardAPI } from "apis/postAPI";
 import Card from "../Card";
 import { Grid, GridBoxWrapper } from "./style";
+import { Link } from "react-router-dom";
 
 const initeState = {
   postId: 1,
@@ -30,7 +31,9 @@ const GridBox = () => {
     <GridBoxWrapper>
       <Grid>
         {boards.map((board) => (
-          <Card key={board.postId} title={board.title}></Card>
+          <Link to={"/detail/" + board.postId}>
+            <Card key={board.postId} title={board.title}></Card>
+          </Link>
         ))}
       </Grid>
     </GridBoxWrapper>

@@ -39,7 +39,12 @@ const GlobalStyle = createGlobalStyle`
   a,
   button {
     cursor: pointer;
+    text-decoration: none;
   }
+  a:link, a:hover, a:active {
+    text-decoration: none; color:#000; 
+  }
+  
 `;
 
 export default GlobalStyle;

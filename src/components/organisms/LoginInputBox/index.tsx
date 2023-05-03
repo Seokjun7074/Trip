@@ -1,7 +1,6 @@
 import useInput from "hooks/useInput";
 import { LoginButton, LoginInput, LoginInputBoxWrapper } from "./style";
 import Form from "components/atoms/Form";
-import { loginUser } from "apis/loginAPI";
 
 const LoginInputBox = () => {
   const [email, setEmail, onChangeEmail] = useInput("");
@@ -18,7 +17,6 @@ const LoginInputBox = () => {
     e.preventDefault();
     const data = makeObject();
     console.log(data);
-    // const res = await loginUser(data);
   };
 
   return (
