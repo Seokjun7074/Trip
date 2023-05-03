@@ -3,7 +3,7 @@ import * as S from "./style";
 
 interface Props {
   onClick?: () => void;
-  children?: any;
+  children?: React.ReactNode;
   className?: string;
   type?: string;
 }

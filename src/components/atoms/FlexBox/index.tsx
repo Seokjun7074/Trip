@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
 interface Props {
-  children: any;
+  children: React.ReactNode;
   className?: string;
 }
 

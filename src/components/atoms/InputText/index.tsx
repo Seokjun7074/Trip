@@ -5,7 +5,7 @@ interface Props {
   type?: string;
   value?: string;
   placeholder?: string;
-  onChange?: any;
+  onChange?: () => void;
   className?: string;
   name?: string;
 }

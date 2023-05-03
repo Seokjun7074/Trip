@@ -2,8 +2,8 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  children?: any;
-  onClick?: any;
+  children?: React.ReactNode;
+  onClick?: () => void;
   src?: string;
   className?: string;
 }

@@ -1,7 +1,7 @@
 import * as S from "./style";
 
 interface Props {
-  children: any;
+  children: React.ReactNode;
   className?: string;
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
 }
