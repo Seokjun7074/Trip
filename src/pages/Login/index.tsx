@@ -1,18 +1,15 @@
-import { useState } from "react";
 import { LoginWrapper } from "./style";
 import LoginInputBox from "components/organisms/LoginInputBox";
 import SignupInputBox from "components/organisms/SignupInputBox";
+import useToggle from "hooks/useToggle";
 
 const Login = () => {
-  const [isLogin, setIsLogin] = useState<boolean>(true);
+  const { isToggle, onChange } = useToggle(true);
 
-  const changeLogin = () => {
-    setIsLogin(!isLogin);
-  };
   return (
     <LoginWrapper>
-      {isLogin ? <LoginInputBox /> : <SignupInputBox />}
-      <button onClick={changeLogin}>{isLogin ? "회원가입" : "로그인"}</button>
+      {isToggle ? <LoginInputBox /> : <SignupInputBox />}
+      <button onClick={onChange}>{isToggle ? "회원가입" : "로그인"}</button>
     </LoginWrapper>
   );
 };
