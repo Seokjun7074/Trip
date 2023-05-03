@@ -157,5 +157,31 @@
       "likes": 3,
       "like": true
     }
+  ],
+  "comments": [
+    {
+      "userId": 1,
+      "reply_id": 1,
+      "content": "댓글1",
+      "created_at": "2023-04-14T12:34:56Z"
+    },
+    {
+      "userId": 2,
+      "reply_id": 2,
+      "content": "댓글2",
+      "created_at": "2023-04-14T12:34:56Z"
+    },
+    {
+      "userId": 3,
+      "reply_id": 3,
+      "content": "댓글3",
+      "created_at": "2023-04-14T12:34:56Z"
+    },
+    {
+      "userId": 4,
+      "reply_id": 4,
+      "content": "댓글4",
+      "created_at": "2023-04-14T12:34:56Z"
+    }
   ]
 }
