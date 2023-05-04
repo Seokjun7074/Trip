@@ -6,7 +6,7 @@ import styled from "styled-components";
 export const Header = styled.header`
   width: 100%;
   height: 5rem;
-  padding: ${({ theme }) => theme.size.s};
+  padding: ${({ theme }) => theme.size.s} ${({ theme }) => theme.size.title};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,20 +17,27 @@ export const Header = styled.header`
 `;
 
 export const ButtonWrapper = styled(FlexBox)`
-  gap: 1rem;
+  gap: 3rem;
 `;
 
 export const LoginButton = styled(Button)`
   padding: ${({ theme }) => theme.size.s};
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   background-color: transparent;
   color: ${({ theme }) => theme.color.darkgray};
+  transition: transform 0.2s ease-in 0s;
   :hover {
     background-color: ${({ theme }) => theme.color.lightgray};
+    transform: scale(1) translate(0, -5%);
+    color: ${({ theme }) => theme.color.blue};
+    font-weight: 900;
   }
 `;
+
+export const LogoutButton = styled(LoginButton)``;
+export const PostButton = styled(LoginButton)``;
 
 export const LogoImg = styled(Img)`
   height: 100%;

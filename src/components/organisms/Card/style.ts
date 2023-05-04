@@ -7,7 +7,8 @@ export const CardWrapper = styled(FlexBox)`
   flex-direction: column;
   gap: 10px;
   border-radius: 5px;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
+  box-shadow: 1px 1px 5px grey;
   overflow: hidden;
   color: ${({ theme }) => theme.color.darkgray};
   font-size: large;

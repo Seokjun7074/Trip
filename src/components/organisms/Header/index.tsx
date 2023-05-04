@@ -1,6 +1,4 @@
-import React from "react";
 import * as S from "./style";
-import Button from "components/atoms/Button";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -14,6 +12,7 @@ const Header = ({ children }: Props) => {
       <S.ButtonWrapper>
         <Link to="/login">
           <S.LoginButton>로그인</S.LoginButton>
+          <S.PostButton>포스팅하기</S.PostButton>
         </Link>
       </S.ButtonWrapper>
     </S.Header>
