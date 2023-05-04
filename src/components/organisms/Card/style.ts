@@ -10,6 +10,8 @@ export const CardWrapper = styled(FlexBox)`
   border: 1px solid grey;
   overflow: hidden;
   color: black;
+  font-size: large;
+  font-weight: bold;
   cursor: pointer;
   transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
   :hover {
