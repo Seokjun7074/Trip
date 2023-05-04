@@ -1,6 +1,8 @@
 import useInput from "hooks/useInput";
 import { LoginButton, LoginInput, LoginInputBoxWrapper } from "./style";
 import Form from "components/atoms/Form";
+import { userAPI } from "apis/loginAPI";
+import { loginInterface } from "apis/loginAPI/loginInterface";
 
 const LoginInputBox = () => {
   const [email, setEmail, onChangeEmail] = useInput("");
@@ -13,10 +15,16 @@ const LoginInputBox = () => {
     };
   };
 
+  const setRequest = async (data: loginInterface) => {
+    const response = await userAPI.loginUser(data);
+    return response.data;
+  };
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = makeObject();
-    console.log(data);
+    const loginResponse = await setRequest(data);
+    console.log(loginResponse);
   };
 
   return (

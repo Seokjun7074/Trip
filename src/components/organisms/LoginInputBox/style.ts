@@ -26,6 +26,6 @@ export const LoginButton = styled(Button)`
   padding: ${({ theme }) => theme.size.s};
   font-size: large;
   font-weight: bold;
-  color: white;
+  color: ${({ theme }) => theme.color.lightgray};
   background-color: ${({ theme }) => theme.color.blue};
 `;

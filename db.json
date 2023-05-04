@@ -183,5 +183,9 @@
       "content": "댓글4",
       "created_at": "2023-04-14T12:34:56Z"
     }
-  ]
+  ],
+  "login": {
+    "email": "sukjune96@naver.com",
+    "password": "qwerqwer"
+  }
 }
