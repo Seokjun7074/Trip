@@ -9,7 +9,7 @@ export const CardWrapper = styled(FlexBox)`
   border-radius: 5px;
   border: 1px solid grey;
   overflow: hidden;
-  color: black;
+  color: ${({ theme }) => theme.color.darkgray};
   font-size: large;
   font-weight: bold;
   cursor: pointer;

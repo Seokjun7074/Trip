@@ -8,7 +8,6 @@ const Detail = () => {
 
   return (
     <DetailWrapper>
-      <h3>{postId}</h3>
       <DetailBox postId={postId} />
       <CommentBox />
     </DetailWrapper>

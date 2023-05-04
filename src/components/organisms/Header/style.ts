@@ -21,12 +21,15 @@ export const ButtonWrapper = styled(FlexBox)`
 `;
 
 export const LoginButton = styled(Button)`
-  padding: ${({ theme }) => theme.size.m};
-  height: 50px;
+  padding: ${({ theme }) => theme.size.s};
   font-size: 1rem;
-  font-weight: 600;
-  background-color: ${({ theme }) => theme.color.lightgray};
+  font-weight: 700;
   text-align: center;
+  background-color: transparent;
+  color: ${({ theme }) => theme.color.darkgray};
+  :hover {
+    background-color: ${({ theme }) => theme.color.lightgray};
+  }
 `;
 
 export const LogoImg = styled(Img)`
