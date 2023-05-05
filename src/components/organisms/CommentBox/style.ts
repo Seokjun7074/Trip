@@ -1,5 +1,5 @@
+import Button from "components/atoms/Button";
 import FlexBox from "components/atoms/FlexBox";
-import Input from "components/atoms/InputText";
 import styled from "styled-components";
 
 export const CommentBoxWrapper = styled(FlexBox)`
@@ -26,4 +26,10 @@ export const CommentInput = styled.textarea`
   resize: none;
   padding: ${({ theme }) => theme.size.s};
   font-size: ${({ theme }) => theme.size.m};
+`;
+export const CommentSubmitButton = styled(Button)`
+  height: 40px;
+  background-color: ${({ theme }) => theme.color.blue};
+  color: white;
+  font-weight: bold;
 `;

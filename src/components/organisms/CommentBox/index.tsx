@@ -1,5 +1,6 @@
 import useInput from "hooks/useInput";
-import { CommentBoxWrapper, Comment, CommentInput } from "./style";
+import { CommentBoxWrapper, Comment, CommentInput, CommentSubmitButton } from "./style";
+import { commentAPI } from "apis/postAPI";
 
 const dummyComments = [
   {
@@ -32,12 +33,18 @@ const CommentBox = () => {
   const [comment, setComment, onChange] = useInput("");
   const comments = dummyComments;
 
+  const onSubmit = async () => {
+    const response = await commentAPI.setComment(1, { content: comment });
+    setComment("");
+  };
+
   return (
     <CommentBoxWrapper>
       {comments.map((data) => (
-        <Comment>{data.content}</Comment>
+        <Comment key={data.userId}>{data.content}</Comment>
       ))}
-      <CommentInput placeholder="댓글을 입력하세요." onChange={onChange} />
+      <CommentInput placeholder="댓글을 입력하세요." onChange={onChange} value={comment} />
+      <CommentSubmitButton onClick={onSubmit}>댓글 작성</CommentSubmitButton>
     </CommentBoxWrapper>
   );
 };
