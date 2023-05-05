@@ -8,6 +8,7 @@ import styled from "styled-components";
 export const Divider = styled(FlexBox)`
   width: 100%;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 `;
 
@@ -27,13 +28,23 @@ export const ContentInput = styled(TitleInput)`
   height: 100px;
 `;
 
-export const ImageInput = styled.input`
-  width: 100%;
-  padding: ${({ theme }) => theme.size.s};
-  height: 50px;
+export const PreviewImageWrapper = styled.div`
+  display: flex;
+  background-color: ${({ theme }) => theme.color.lightgray};
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 300px;
+  cursor: pointer;
 `;
 
-export const PreviewImage = styled(Img)``;
+export const PreviewImage = styled(Img)`
+  border-radius: 5px;
+  width: 70%;
+  height: auto;
+`;
 
 export const SubmitButton = styled(Button)`
   padding: ${({ theme }) => theme.size.m};

@@ -12,6 +12,8 @@ const Header = ({ children }: Props) => {
       <S.ButtonWrapper>
         <Link to="/login">
           <S.LoginButton>로그인</S.LoginButton>
+        </Link>
+        <Link to="/post">
           <S.PostButton>포스팅하기</S.PostButton>
         </Link>
       </S.ButtonWrapper>

@@ -18,7 +18,7 @@ export const Header = styled.header`
 `;
 
 export const ButtonWrapper = styled(FlexBox)`
-  gap: 3rem;
+  gap: 5px;
 `;
 
 export const LoginButton = styled(Button)`
