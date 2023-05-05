@@ -31,8 +31,8 @@ const GridBox = () => {
     <GridBoxWrapper>
       <Grid>
         {boards.map((board) => (
-          <Link to={"/detail/" + board.postId}>
-            <Card key={board.postId} title={board.title}></Card>
+          <Link key={board.postId} to={"/detail/" + board.postId}>
+            <Card title={board.title}></Card>
           </Link>
         ))}
       </Grid>
