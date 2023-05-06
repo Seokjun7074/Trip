@@ -3,6 +3,7 @@ import { LoginButton, LoginInput, LoginInputBoxWrapper } from "./style";
 import Form from "components/atoms/Form";
 import { userAPI } from "apis/loginAPI";
 import { loginInterface } from "apis/loginAPI/loginInterface";
+import GoogleLoginButton from "components/googleLogin";
 
 const LoginInputBox = () => {
   const [email, setEmail, onChangeEmail] = useInput("");
@@ -33,6 +34,7 @@ const LoginInputBox = () => {
         <LoginInput type="email" value={email} onChange={onChangeEmail} placeholder="이메일" />
         <LoginInput type="password" value={password} onChange={onChangePassword} placeholder="비밀번호" />
         <LoginButton type="submit">로그인</LoginButton>
+        <GoogleLoginButton />
       </Form>
     </LoginInputBoxWrapper>
   );
