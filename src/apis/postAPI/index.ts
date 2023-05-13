@@ -2,8 +2,8 @@ import API from "../axios";
 import { setPostInterface, editPostInterface } from "./postInterface";
 
 export const boardAPI = {
-  // getBoard: (page: number, size: number) => API.post(`/board?page=${page}&size=${size}&sort=recent`),
-  getBoard: (page: number, size: number) => API.get(`/board`),
+  getBoard: (page: number, size: number) => API.post(`/board?page=${page}&size=${size}&sort=recent`),
+  // getBoard: (page: number, size: number) => API.get(`/board`),
 
   getPost: (id: number) => API.get(`/posts/${id}`),
 

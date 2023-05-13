@@ -18,7 +18,7 @@ const GridBox = () => {
   const [boards, setBoards] = useState([initeState]);
 
   const getResponse = async () => {
-    const response = await boardAPI.getBoard(0, 0);
+    const response = await boardAPI.getBoard(1, 1);
     setBoards(response.data.posts.boards);
     setNotices(response.data.posts.notices);
   };
