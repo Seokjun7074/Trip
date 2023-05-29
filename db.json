@@ -1,0 +1,191 @@
+{
+  "board": {
+    "status": 200,
+    "posts": {
+      "notices": [
+        {
+          "postId": 1,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자1",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 2,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자2",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 3,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자3",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 4,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자4",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 5,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자5",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 6,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자6",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 7,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자7",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 8,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자8",
+          "title": "제목",
+          "views": 1,
+          "likes": 1
+        }
+      ],
+      "boards": [
+        {
+          "postId": 1,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자1",
+          "title": "제목1",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 2,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자2",
+          "title": "제목2",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 3,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자3",
+          "title": "제목3",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 4,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자4",
+          "title": "제목4",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 5,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자5",
+          "title": "제목5",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 6,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자6",
+          "title": "제목6",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 7,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자7",
+          "title": "제목7",
+          "views": 1,
+          "likes": 1
+        },
+        {
+          "postId": 8,
+          "registerTime": "yyyy-MM-dd HH:mm:ss",
+          "writer": "작성자8",
+          "title": "제목8",
+          "views": 1,
+          "likes": 1
+        }
+      ]
+    }
+  },
+  "posts": [
+    {
+      "id": 1,
+      "registerTime": "yyyy-MM-dd HH:mm:ss",
+      "name": "작성자 이름",
+      "title": "제목1",
+      "content": "내용1",
+      "views": 1,
+      "likes": 3,
+      "like": true
+    },
+    {
+      "id": 2,
+      "registerTime": "yyyy-MM-dd HH:mm:ss",
+      "name": "작성자 이름2",
+      "title": "제목2",
+      "content": "내용2",
+      "views": 1,
+      "likes": 3,
+      "like": true
+    }
+  ],
+  "comments": [
+    {
+      "userId": 1,
+      "reply_id": 1,
+      "content": "댓글1",
+      "created_at": "2023-04-14T12:34:56Z"
+    },
+    {
+      "userId": 2,
+      "reply_id": 2,
+      "content": "댓글2",
+      "created_at": "2023-04-14T12:34:56Z"
+    },
+    {
+      "userId": 3,
+      "reply_id": 3,
+      "content": "댓글3",
+      "created_at": "2023-04-14T12:34:56Z"
+    },
+    {
+      "userId": 4,
+      "reply_id": 4,
+      "content": "댓글4",
+      "created_at": "2023-04-14T12:34:56Z"
+    }
+  ],
+  "login": {
+    "email": "sukjune96@naver.com",
+    "password": "qwerqwer"
+  }
+}

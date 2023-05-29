@@ -2,14 +2,15 @@ import React from "react";
 import * as S from "./style";
 
 interface Props {
-  children?: any;
-  onClick?: any;
+  children?: React.ReactNode;
+  onClick?: () => void;
   src?: string;
+  className?: string;
 }
 
-const Img = ({ children, onClick, src }: Props) => {
+const Img = ({ children, onClick, src, className }: Props) => {
   return (
-    <S.Img src={src} onClick={onClick}>
+    <S.Img src={src} onClick={onClick} className={className}>
       {children}
     </S.Img>
   );

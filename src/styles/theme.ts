@@ -5,8 +5,9 @@ const size = {
   title: "3rem",
 };
 const color = {
-  lightgray: "#E9E9E9",
-  darkgray: "#333333",
+  lightgray: "#f2f4f6",
+  darkgray: "#4e5968;",
+  blue: "#3288FF",
 };
 
 const theme = {

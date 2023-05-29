@@ -1,12 +1,12 @@
-import React from "react";
 import * as S from "./style";
 
 interface Props {
-  text?: string;
+  className?: string;
+  children: string;
 }
 
-const Input = ({ text }: Props) => {
-  return <S.Label>{text}</S.Label>;
+const Label = ({ className, children }: Props) => {
+  return <S.Label className={className}>{children}</S.Label>;
 };
 
-export default Input;
+export default Label;
