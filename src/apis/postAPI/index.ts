@@ -1,13 +1,13 @@
-import API from "../axios";
-import { setPostInterface, editPostInterface } from "./postInterface";
+import API from '../axios';
+import { setPostInterface, editPostInterface } from './postInterface';
 
 export const boardAPI = {
-  getBoard: (page: number, size: number) => API.post(`/board?page=${page}&size=${size}&sort=recent`),
-  // getBoard: (page: number, size: number) => API.get(`/board`),
+  // getBoard: (page: number, size: number) => API.post(`/board?page=${page}&size=${size}&sort=recent`),
+  getBoard: (page: number, size: number) => API.get(`/board`),
 
   getPost: (id: number) => API.get(`/posts/${id}`),
 
-  setPost: (data: setPostInterface) => API.post("/posts", data),
+  setPost: (data: setPostInterface) => API.post('/posts', data),
 
   editPost: (id: number, data: editPostInterface) => API.put(`/posts/${id}`, data),
 

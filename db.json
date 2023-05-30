@@ -4,160 +4,58 @@
     "posts": {
       "notices": [
         {
-          "postId": 1,
+          "postId": "1",
           "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자1",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
+          "writer": "writer1",
+          "title": "title1",
+          "views": "1",
+          "likes": "1"
         },
         {
-          "postId": 2,
+          "postId": "2",
           "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자2",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
+          "writer": "writer2",
+          "title": "title2",
+          "views": "2",
+          "likes": "2"
         },
         {
-          "postId": 3,
+          "postId": "3",
           "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자3",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 4,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자4",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 5,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자5",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 6,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자6",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 7,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자7",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 8,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자8",
-          "title": "제목",
-          "views": 1,
-          "likes": 1
+          "writer": "writer3",
+          "title": "title3",
+          "views": "3",
+          "likes": "3"
         }
       ],
       "boards": [
         {
-          "postId": 1,
+          "postId": "1",
           "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자1",
-          "title": "제목1",
-          "views": 1,
-          "likes": 1
+          "writer": "writer1",
+          "title": "title1",
+          "views": "1",
+          "likes": "1"
         },
         {
-          "postId": 2,
+          "postId": "2",
           "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자2",
-          "title": "제목2",
-          "views": 1,
-          "likes": 1
+          "writer": "writer2",
+          "title": "title2",
+          "views": "2",
+          "likes": "2"
         },
         {
-          "postId": 3,
+          "postId": "3",
           "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자3",
-          "title": "제목3",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 4,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자4",
-          "title": "제목4",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 5,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자5",
-          "title": "제목5",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 6,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자6",
-          "title": "제목6",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 7,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자7",
-          "title": "제목7",
-          "views": 1,
-          "likes": 1
-        },
-        {
-          "postId": 8,
-          "registerTime": "yyyy-MM-dd HH:mm:ss",
-          "writer": "작성자8",
-          "title": "제목8",
-          "views": 1,
-          "likes": 1
+          "writer": "writer3",
+          "title": "title3",
+          "views": "3",
+          "likes": "3"
         }
       ]
     }
   },
-  "posts": [
-    {
-      "id": 1,
-      "registerTime": "yyyy-MM-dd HH:mm:ss",
-      "name": "작성자 이름",
-      "title": "제목1",
-      "content": "내용1",
-      "views": 1,
-      "likes": 3,
-      "like": true
-    },
-    {
-      "id": 2,
-      "registerTime": "yyyy-MM-dd HH:mm:ss",
-      "name": "작성자 이름2",
-      "title": "제목2",
-      "content": "내용2",
-      "views": 1,
-      "likes": 3,
-      "like": true
-    }
-  ],
   "comments": [
     {
       "userId": 1,
@@ -185,7 +83,7 @@
     }
   ],
   "login": {
-    "email": "sukjune96@naver.com",
-    "password": "qwerqwer"
+    "email": "qwre@rt.com",
+    "password": "asdf"
   }
 }

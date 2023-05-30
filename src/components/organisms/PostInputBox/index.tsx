@@ -1,5 +1,5 @@
-import { HiPhoto } from "react-icons/hi2";
-import useInput from "hooks/useInput";
+import { HiPhoto } from 'react-icons/hi2';
+import useInput from 'hooks/useInput';
 import {
   ContentInput,
   Divider,
@@ -8,13 +8,13 @@ import {
   PreviewImage,
   SubmitButton,
   TitleInput,
-} from "./style";
-import { useRef, useState } from "react";
+} from './style';
+import { useRef, useState } from 'react';
 
 const PostInputBox = () => {
-  const [title, setTitle, titleHandler] = useInput("");
-  const [content, setContent, contentHandler] = useInput("");
-  const [imagePreview, setImagePreview] = useState<string>("");
+  const [title, setTitle, titleHandler] = useInput('');
+  const [content, setContent, contentHandler] = useInput('');
+  const [imagePreview, setImagePreview] = useState<string>('');
   const [imageFile, setImageFile] = useState<File[]>([]);
   const imageRef = useRef<HTMLInputElement>(null);
   const formData = new FormData();
@@ -35,17 +35,17 @@ const PostInputBox = () => {
   };
   const deleteImagePreview = () => {
     if (imageRef.current !== null) {
-      imageRef.current.value = "";
+      imageRef.current.value = '';
       URL.revokeObjectURL(imagePreview);
-      setImagePreview("");
+      setImagePreview('');
       setImageFile([]);
     }
   };
   const makeFormdata = () => {
-    formData.append("title", title);
-    formData.append("content", content);
+    formData.append('title', title);
+    formData.append('content', content);
     if (imageFile !== undefined) {
-      formData.append("image", imageFile[0]);
+      formData.append('image', imageFile[0]);
     }
   };
   const submit = () => {
@@ -75,7 +75,7 @@ const PostInputBox = () => {
         {imagePreview ? <button onClick={deleteImagePreview}>사진 삭제</button> : null}
       </Divider>
       <SubmitButton onClick={submit}>작성하기</SubmitButton>
-      <input type="file" accept="image/*" onChange={onFileChange} ref={imageRef} style={{ display: "none" }} />
+      <input type="file" accept="image/*" onChange={onFileChange} ref={imageRef} style={{ display: 'none' }} />
     </>
   );
 };

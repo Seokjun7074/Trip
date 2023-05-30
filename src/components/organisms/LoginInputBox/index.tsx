@@ -1,13 +1,13 @@
-import useInput from "hooks/useInput";
-import { LoginButton, LoginInput, LoginInputBoxWrapper } from "./style";
-import Form from "components/atoms/Form";
-import { userAPI } from "apis/loginAPI";
-import { loginInterface } from "apis/loginAPI/loginInterface";
-import GoogleLoginButton from "components/googleLogin";
+import useInput from 'hooks/useInput';
+import { LoginButton, LoginInput, LoginInputBoxWrapper } from './style';
+import Form from 'components/atoms/Form';
+import { userAPI } from 'apis/loginAPI';
+import { loginInterface } from 'apis/loginAPI/loginInterface';
+import GoogleLoginButton from 'components/googleLogin';
 
 const LoginInputBox = () => {
-  const [email, setEmail, onChangeEmail] = useInput("");
-  const [password, setPassword, onChangePassword] = useInput("");
+  const [email, setEmail, onChangeEmail] = useInput('');
+  const [password, setPassword, onChangePassword] = useInput('');
 
   const makeObject = () => {
     return {
@@ -25,7 +25,6 @@ const LoginInputBox = () => {
     e.preventDefault();
     const data = makeObject();
     const loginResponse = await setRequest(data);
-    console.log(loginResponse);
   };
 
   return (

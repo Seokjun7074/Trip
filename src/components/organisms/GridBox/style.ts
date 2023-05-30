@@ -1,5 +1,5 @@
-import FlexBox from "components/atoms/FlexBox";
-import styled from "styled-components";
+import FlexBox from 'components/atoms/FlexBox';
+import styled from 'styled-components';
 
 export const GridBoxWrapper = styled(FlexBox)`
   height: 100%;

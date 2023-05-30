@@ -1,10 +1,10 @@
-import * as S from "./style";
+import * as S from './style';
 
 interface Props {
   type?: string;
   value?: string;
   placeholder?: string;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   name?: string;
 }

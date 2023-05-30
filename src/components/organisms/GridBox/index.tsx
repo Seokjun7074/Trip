@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import { boardAPI } from "apis/postAPI";
-import Card from "../Card";
-import { Grid, GridBoxWrapper } from "./style";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { boardAPI } from 'apis/postAPI';
+import Card from '../Card';
+import { Grid, GridBoxWrapper } from './style';
+import { Link } from 'react-router-dom';
 
 const initeState = {
   postId: 1,
-  registerTime: "yyyy-MM-dd HH:mm:ss",
-  writer: "작성자1",
-  title: "제목",
+  registerTime: 'yyyy-MM-dd HH:mm:ss',
+  writer: '작성자1',
+  title: '제목',
   views: 1,
   likes: 1,
 };
@@ -30,8 +30,8 @@ const GridBox = () => {
   return (
     <GridBoxWrapper>
       <Grid>
-        {boards.map((board) => (
-          <Link key={board.postId} to={"/detail/" + board.postId}>
+        {boards.map(board => (
+          <Link key={board.postId} to={'/detail/' + board.postId}>
             <Card title={board.title}></Card>
           </Link>
         ))}

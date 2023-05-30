@@ -1,6 +1,6 @@
-import Button from "components/atoms/Button";
-import FlexBox from "components/atoms/FlexBox";
-import styled from "styled-components";
+import Button from 'components/atoms/Button';
+import FlexBox from 'components/atoms/FlexBox';
+import styled from 'styled-components';
 
 export const CommentBoxWrapper = styled(FlexBox)`
   flex-direction: column;
@@ -21,7 +21,7 @@ export const Comment = styled.div`
   text-align: left;
 `;
 
-export const CommentInput = styled.textarea`
+export const CommentInput = styled.input`
   height: 200px;
   resize: none;
   padding: ${({ theme }) => theme.size.s};

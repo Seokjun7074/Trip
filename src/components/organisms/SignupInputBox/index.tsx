@@ -1,15 +1,15 @@
-import Form from "components/atoms/Form";
-import { SignupInputBoxWrapper, SignupInput, SignupButton, RadioBox } from "./style";
-import useInput from "hooks/useInput";
+import Form from 'components/atoms/Form';
+import { SignupInputBoxWrapper, SignupInput, SignupButton, RadioBox } from './style';
+import useInput from 'hooks/useInput';
 
 const SignupInputBox = () => {
-  const [email, setEmail, onChangeEmail] = useInput("");
-  const [password, setPassword, onChangePassword] = useInput("");
-  const [passwordCheck, setPasswordCheck, onChangePasswordCheck] = useInput("");
-  const [name, setName, onChangeName] = useInput("");
-  const [age, setAge, onChangeAge] = useInput("");
-  const [phone, setPhone, onChangePhone] = useInput("");
-  const [gender, setGender, onChangeGender] = useInput("");
+  const [email, setEmail, onChangeEmail] = useInput('');
+  const [password, setPassword, onChangePassword] = useInput('');
+  const [passwordCheck, setPasswordCheck, onChangePasswordCheck] = useInput('');
+  const [name, setName, onChangeName] = useInput('');
+  const [age, setAge, onChangeAge] = useInput('');
+  const [phone, setPhone, onChangePhone] = useInput('');
+  const [gender, setGender, onChangeGender] = useInput('');
 
   const makeObject = () => {
     return {
