@@ -5,15 +5,16 @@ export const boardAPI = {
   // getBoard: (page: number, size: number) => API.post(`/board?page=${page}&size=${size}&sort=recent`),
   getBoard: (page: number, size: number) => API.get(`/board`),
 
-  getPost: (id: number) => API.get(`/posts/${id}`),
+  getPost: (postId: string) => API.get(`/posts/${postId}`),
+  // getPost: (id: number) => API.get(`/boards/posts/boards?postId=${id}`),
 
   setPost: (data: setPostInterface) => API.post('/posts', data),
 
-  editPost: (id: number, data: editPostInterface) => API.put(`/posts/${id}`, data),
+  editPost: (postId: string, data: editPostInterface) => API.put(`/posts/${postId}`, data),
 
-  deletePost: (id: number) => API.delete(`/posts/${id}`),
+  deletePost: (postId: string) => API.delete(`/posts/${postId}`),
 
-  likePost: (id: number) => API.post(`/posts/${id}/like`),
+  likePost: (postId: string) => API.post(`/posts/${postId}/like`),
 
   searchPost: (page: number, size: number, keyword: string) =>
     API.post(`/posts/search?page=${page}&size=${size}&keyword=${keyword}`),
@@ -22,10 +23,10 @@ export const boardAPI = {
 };
 
 export const commentAPI = {
-  setComment: (postId: number, data: { content: string }) => API.post(`/posts/${postId}/comments`, data),
+  setComment: (postId: string, data: { content: string }) => API.post(`/posts/${postId}/comments`, data),
 
-  editComment: (postId: number, commentId: number, data: { content: string }) =>
+  editComment: (postId: string, commentId: string, data: { content: string }) =>
     API.put(`/posts/${postId}/comments/${commentId}`, data),
 
-  deleteComment: (postId: number, commentId: number) => API.delete(`/posts/${postId}/comments/${commentId}`),
+  deleteComment: (postId: string, commentId: string) => API.delete(`/posts/${postId}/comments/${commentId}`),
 };

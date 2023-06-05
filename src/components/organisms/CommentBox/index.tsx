@@ -1,6 +1,7 @@
 import useInput from 'hooks/useInput';
 import { CommentBoxWrapper, Comment, CommentInput, CommentSubmitButton } from './style';
 import { commentAPI } from 'apis/postAPI';
+import { PropType } from 'pages/Detail';
 
 const dummyComments = [
   {
@@ -29,12 +30,12 @@ const dummyComments = [
   },
 ];
 
-const CommentBox = () => {
+const CommentBox = ({ postId }: PropType) => {
   const [comment, setComment, onChange] = useInput('');
   const comments = dummyComments;
 
   const onSubmit = async () => {
-    const response = await commentAPI.setComment(1, { content: comment });
+    const response = await commentAPI.setComment(postId, { content: comment });
     setComment('');
   };
 

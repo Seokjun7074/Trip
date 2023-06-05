@@ -4,6 +4,10 @@ import Card from '../Card';
 import { Grid, GridBoxWrapper } from './style';
 import { Link } from 'react-router-dom';
 
+export interface PropType {
+  title: string;
+}
+
 const initeState = {
   postId: 1,
   registerTime: 'yyyy-MM-dd HH:mm:ss',

@@ -1,12 +1,9 @@
-import Label from "components/atoms/Label";
-import { CardWrapper } from "./style";
-import Img from "components/atoms/Img";
+import Label from 'components/atoms/Label';
+import { CardWrapper } from './style';
+import Img from 'components/atoms/Img';
+import { PropType } from '../GridBox';
 
-interface Props {
-  children?: React.ReactNode;
-  title: string;
-}
-const Card = ({ children, title }: Props) => {
+const Card = ({ title }: PropType) => {
   return (
     <CardWrapper>
       <Img src="https://dummyimage.com/600x400/000/fff" />
